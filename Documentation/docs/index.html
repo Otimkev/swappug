@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HeyP Documentation</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body class="body-blue">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+
+                            <span class="text-highlight">Hey</span><span class="text-bold">P</span>
+                        </a>
+                    </h1>
+
+                </div>
+                <!--//branding-->
+
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Documentation</a></li>
+                </ol>
+
+            </div>
+            <!--//container-->
+        </header>
+        <!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: February 9th, 2021 by Tawfiq Bahri</div>
+                </div>
+                <!--//doc-header-->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="introduction" class="doc-section">
+                                <h2 class="section-title">HeyP: Flutter Social App</h2>
+                                <div class="section-block">
+                                    <p>HeyP is a Social app used to get connected with family & friends. 
+                                        The app is created in such a way that helps the developer to customize the things easier. 
+                                        We are committed to keep adding a new feature and enhance app. 
+                                        We are providing a complete document that will help you in installation & running the application, 
+                                        although You are free to ask any question related to a product., 
+                                        it contains more than 16 screens, you can reuse more than 40 widgets to customize your application.
+
+                                        The backed is developed with Node.js, and integrated Firebase for push notifications.
+
+                                        </br></br> The same code is used for both iOS and Android
+                                    </p>
+                                </div>
+                            </section>
+                            <!--//doc-section-->
+                            <section id="get-started-backend" class="doc-section">
+                                <h2 class="section-title">Getting Started with The Backend</h2>
+                                <div class="section-block">
+                                    <p>
+                                        Working environment:
+                                        <ul>
+                                            <li>
+                                                Ubuntu lts 20.0.4
+                                            </li>
+                                            <li>
+                                                Nodejs v12.20.1
+                                            </li>
+                                            <li>
+                                                MySql V 8.0.23-0ubuntu0.20.04.1
+                                            </li>
+                                        </ul>
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Read <i style="color: darkcyan;">server-setup.txt</i> for server setup 
+                                        </li>
+                                        <li>
+                                            In <i style="color: darkcyan;">Social/api/db</i> folder add your "mysql" info (<i
+                                            style="color: darkcyan;">db.js </i> and <i
+                                            style="color: darkcyan;">sequelize.js</i>)
+                                        </li>
+                                        </br>
+                                        <li>
+                                            Create a new Firebase app, go to project settings -> Service accounts -> Firebase Admin SDK
+                                            and click "Generate new private key", it will download <i
+                                            style="color: darkcyan;">serviceAccountKey.json</i> file; copy it to <i
+                                            style="color: darkcyan;">Social/api folder</i>.
+                                        </li>
+                                        </br>
+                                        <li>
+                                            Edit <i
+                                            style="color: darkcyan;">.env</i> file and add your JWT_KEY secret kays (also nodemone.json)
+                                            use <a href="https://passwordsgenerator.net">this link</a> to generate strong passwords.
+                                        </li>
+                                        </br>
+                                        <li>
+                                            Import MYSQL database.
+                                        </li>
+                                        </br>
+                                        <li>
+                                            Run <i
+                                            style="color: darkcyan;">npm install</i> and finally run <i
+                                            style="color: darkcyan;">nodemon ./bin/www</i>
+                                        </li>
+                                        <li>
+                                            Useful links:
+                                            <p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04">How To Install MySQL on Ubuntu 20.04</a></p>
+                                            <p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04">How To Install Node.js on Ubuntu 20.04</a></p>
+                                            <p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-20-04">How To Set Up a Node.js Application for Production on Ubuntu 20.04</a></p>
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section id="get-started" class="doc-section">
+                                <h2 class="section-title">Getting Started with The App</h2>
+                                <div class="section-block">
+                                    <ul>
+                                        <li>
+                                            After download and unzip the package, use preferred IDE (<b>Android
+                                                Studio</b> /
+                                            <b>Visual Code</b> / <b>IntelliJ</b>) to open the project
+                                            <i style="color: darkcyan;">heyp</i> folder.
+                                        </li>
+                                        </br>
+                                        <li>
+                                            Click the Get dependencies or Packages get to install the libraries from <i
+                                                style="color: darkcyan;">pubspecs.yaml</i> file.
+                                        </li>
+                                        </br>
+                                        <li>
+                                            Change API url in: <i
+                                            style="color: darkcyan;">lib/infrastructure/api/api_service.dart</i> file.
+                                        </li>
+                                        </br>
+                                        <li>
+                                            Change base url in: <i
+                                            style="color: darkcyan;">lib/presentation/routes/routes.dart</i> file.
+                                        </li>
+                                        </br>
+                                        <li>
+                                            Run <i
+                                            style="color: darkcyan;">flutter pub run build_runner watch --delete-conflicting-outputs</i> in terminal.
+                                        </li>
+                                        </br>
+                                        <li>
+                                            Open the simulator to run iOS or Android
+                                        </li>
+                                        </br>
+                                        <li>
+                                            Then press the run button to start project
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section id="setup" class="doc-section">
+                                <h2 class="section-title">How to UI Kit?</h2>
+                                <p>In the <span style="color: darkcyan;">
+                                        &lt;Your
+                                        Poject&gt;/lib/presentation </span> folder you should find 4
+                                    subdirectories:</p>
+
+
+
+                                <div id="step1" class="section-block">
+                                    <h3 class="block-title">Components and Elements</h3>
+                                    <p>In this folder <span style="color: darkcyan;">&lt;Your
+                                            Poject&gt;/lib/presentation/components</span> there are +25
+                                        Widgets ready to use in your App:
+                                    </p>
+                                    <img class="img-fluid" src="assets/images/components.png" alt="Components" />
+
+                                    </br>
+                                    </br>
+                                    <p>Just you can call the widget class and customize it with you parameters
+                                        and you can get the stylish widget integrated in your app</p>
+
+                                    </br>
+                                    <b>Example:</b>
+                                    </br>
+                                    </br>
+                                    <code>
+                                            <pre style="color: white;">
+//...
+CategoryItemWidget(
+    category: categories[index],
+    onPressed: () {
+    Navigator.of(context).pushNamed(
+        Routes.category,
+        arguments: categories[index],
+    );
+    },
+),
+//...
+                                            </pre>
+                                        </code>
+                                </div>
+                                <!--//section-block-->
+                                <div id="step3" class="section-block">
+
+                                    <h3 class="block-title">Routing</h3>
+                                    <span style="color: darkcyan;">&lt;Your
+                                        Poject&gt;/lib/routes</span>
+                                    <p>The navigation mode in Foodybite App UI Kit is route aspect it's easy and
+                                        flexible approach
+                                    </p>
+                                    <code>
+                                        <pre style="color: white;">
+//...
+switch (settings.name) {
+    case Routes.splash:
+        return CupertinoPageRoute(builder: (_) => SplashPage());
+
+    case Routes.login:
+        return CupertinoPageRoute(builder: (_) => LoginPage());
+
+    case Routes.signup:
+        return CupertinoPageRoute(builder: (_) => SignupPage());
+
+    case Routes.setLocation:
+        return CupertinoPageRoute(builder: (_) => SetLocationPage());
+//...
+                                        </pre>
+                                    </code>
+                                </div>
+                                <div id="step4" class="section-block">
+
+                                    <h3 class="block-title">Ready Pages</h3>
+
+                                    <p>In this folder <span style="color: darkcyan;">&lt;Your
+                                            Poject&gt;/lib/components/pages</span> there are <b>+16 Pages/Screens</b> pre-made:
+                                        </br>
+                                        Each screen is in a folder and have it's own widgets subfolder
+                                    </p>
+                                    <img class="img-fluid" src="assets/images/pages.png" alt="Ready Pages" />
+
+                                    </br>
+                                    </br>
+                                </div>
+                                <div id="step5" class="section-block">
+
+                                    <h3 class="block-title">Project Utils</h3>
+
+                                    <p>In this folder <span style="color: darkcyan;">&lt;Your
+                                            Poject&gt;/lib/utils</span> there are some configuration files for <b>app
+                                            theming</b>, <b>constants</b>, <b>colors</b>, <b>text styles</b> ...etc.
+                                    </p>
+                                    <img class="img-fluid" src="assets/images/utils.png" alt="Ready Pages" />
+
+                                    </br>
+                                    </br>
+                                </div>
+                                <div id="step6" class="section-block">
+
+                                    <h3 class="block-title">i18n (internationalisation)</h3>
+
+                                    <ul>
+                                        <li>
+                                            <span style="color: darkcyan;">&lt;Your
+                                                Poject&gt;/assets/languages</span> folder contains
+                                            internationalisation json files.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <!--//doc-section-->
+                            <section id="build-section" class="doc-section">
+                                <h2 class="section-title">Build and Install App</h2>
+                                <div class="section-block">
+                                    <ul>
+                                        <li>
+                                            After you making all you changes and customizations save the project.
+                                        </li>
+                                        <li>
+                                            Open Console, navigate to you project folder
+                                        </li>
+                                        <li>
+                                            Run <span style="color: darkcyan;">flutter build apk --release</span> you
+                                            should get the apk file in the <span style="color: darkcyan;">/output</span>
+                                            folder
+                                        </li>
+                                        <li>
+                                            Run <span style="color: darkcyan;">flutter install</span> to install you
+                                            application on your connected devises
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section id="credit-section" class="doc-section">
+                                <h2 class="section-title">Credits</h2>
+                                <div class="section-block">
+                                    <ul>
+                                        <li>
+                                            Flutter community
+                                        </li>
+                                        <li>
+                                            Yagnesh P for his beatiful design
+                                        </li>
+                                        <li>
+                                            Pictures from <a href="https://unsplash.com">Unsplash</a>
+                                        </li>
+                                        <li>
+                                            Icons from <a href="https://www.flaticon.com">Flaticon</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                        <!--//content-inner-->
+                    </div>
+                    <!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+
+                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                <a class="nav-link scrollto" href="#introduction">HeyP: Flutter Social App</a>
+                                <a class="nav-link scrollto" href="#get-started-backend">Getting Started with The Backend</a>
+                                <a class="nav-link scrollto" href="#get-started">Getting Started with The App</a>
+                                <a class="nav-link scrollto" href="#setup">How to UI Kit?</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#step1">Components and Elements</a>
+                                    <a class="nav-link scrollto" href="#step3">Routing</a>
+                                    <a class="nav-link scrollto" href="#step4">Ready Pages</a>
+                                    <a class="nav-link scrollto" href="#step5">Project Utils</a>
+                                    <a class="nav-link scrollto" href="#step6">i18n (internationalisation)</a>
+                                </nav>
+                                <!--//nav-->
+                                <a class="nav-link scrollto" href="#build-section">Build and Install App</a>
+                                <a class="nav-link scrollto" href="#credit-section">Credits</a>
+                            </nav>
+                            <!--//doc-menu-->
+
+                        </div>
+                    </div>
+                    <!--//doc-sidebar-->
+                </div>
+                <!--//doc-body-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//doc-wrapper-->
+
+    </div>
+    <!--//page-wrapper-->
+
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by tevfik1</small>
+
+        </div>
+        <!--//container-->
+    </footer>
+    <!--//footer-->
+
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+
+</html>

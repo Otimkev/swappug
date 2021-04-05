@@ -1,0 +1,7 @@
+{
+    "env": {
+        "JWT_KEY": "ADD_YOUR_KEY",
+        "JWT_KEY_FORGOT1": "ADD_YOUR_KEY",
+        "JWT_KEY_FORGOT2": "ADD_YOUR_KEY"
+    }
+}
